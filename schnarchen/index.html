@@ -14,7 +14,11 @@
 
 
 
-    <link rel="stylesheet" href="/fonts/open-sans.css" />
+    <link rel="preload" href="/fonts/open-sans.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="/fonts/open-sans.css">
+    </noscript>
+
 
 
 
@@ -131,13 +135,12 @@
                     </div>
 
 
-                    <div class="w-full max-w-3xl mx-auto mb-10 rounded shadow-md overflow-hidden relative"
-                        style="aspect-ratio: 16 / 10;">
+                    <div class="max-w-4xl mx-auto mb-10 rounded shadow-md overflow-hidden">
                         <img src="/img/desperatewife.webp"
                             alt="Hero-Bild: Frau liegt entspannt mit ergonomischem Kissen" width="800" height="500"
-                            decoding="async" loading="eager" fetchpriority="high"
-                            class="absolute inset-0 w-full h-full object-cover" />
+                            decoding="async" loading="eager" fetchpriority="high" class="w-full h-auto" />
                     </div>
+
 
 
 
@@ -237,8 +240,13 @@
                         <p class="mt-2 text-lg md:text-xl text-gray-800">Schon nach ein paar Nächten zeigte sich der
                             Unterschied – <span class=" underline">sogar in meinem
                                 Schlaftracker:</span></p>
-                        <img src="/img/sleepscore_de.webp" alt="Schlafanalyse vorher-nachher mit dem Derila Ergo Kissen"
-                            loading="lazy" class="w-full rounded shadow-md my-4" />
+                        <div class="aspect-[16/9] w-full rounded shadow-md my-4 overflow-hidden">
+                            <img src="/img/sleepscore_de.webp"
+                                alt="Schlafanalyse vorher-nachher mit dem Derila Ergo Kissen" loading="lazy"
+                                class="w-full h-full object-cover" width="800" height="450" />
+                        </div>
+
+
                         <p class="text-sm text-gray-600 italic text-center">Links: Vor Derila – Rechts: Nach Derila</p>
                     </section>
 
@@ -350,8 +358,10 @@
 
                                 <!-- Kommentar 1 -->
                                 <div class="flex mt-6">
-                                    <img alt="Michael K." class="w-10 h-10 mr-4 rounded-full" loading="lazy"
-                                        src="https://randomuser.me/api/portraits/men/45.jpg" />
+                                    <img class="w-10 h-10 mr-4 rounded-full"
+                                        src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael K."
+                                        loading="lazy" width="40" height="40" />
+
                                     <div>
                                         <p class="text-sm"><span class="font-semibold text-blue-600">Michael K.</span>
                                         </p>
@@ -582,7 +592,7 @@
                             alt="Derila Kissen" class="mx-auto max-w-full h-auto" />
                     </a>
 
-                    <div class="text-center my-2">
+                    <div class="text-center my-2 min-h-[24px]">
                         <p class="text-white font-medium">NUR heute 70 % RABATT<br> + 30 Tage Rückgaberecht</p>
                     </div>
 
@@ -700,17 +710,16 @@
         <link href="https://trk.mein-derila.de/d/.js?noscript=true&lpurl=" rel="stylesheet" />
     </noscript>
 
-    <!-- Hotjar Tracking Code for Site 6474202 (name missing) -->
+
     <script>
-        (function (h, o, t, j, a, r) {
-            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-            h._hjSettings = { hjid: 6474202, hjsv: 6 };
-            a = o.getElementsByTagName('head')[0];
-            r = o.createElement('script'); r.async = 1;
-            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+        window.addEventListener('load', function () {
+            var hj = document.createElement('script');
+            hj.src = 'https://static.hotjar.com/c/hotjar-6474202.js?sv=6';
+            hj.async = true;
+            document.head.appendChild(hj);
+        });
     </script>
+
 </body>
 
 </html>
