@@ -45,22 +45,11 @@
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
 
-    <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
-        media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
-    </noscript>
+    <link rel="stylesheet" href="/fonts/open-sans.css" />
+
 
 
     <style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-            color: #333;
-            line-height: 1.6;
-        }
-
         .highlight-box {
             background-color: #f8fafc;
             border-left: 4px solid #3b82f6;
@@ -120,7 +109,8 @@
     </noscript>
 </head>
 
-<body>
+<body class="font-sans text-gray-800 leading-relaxed">
+
     <div class="w-full mx-auto text-center py-1" style="background-color: #000000">
         <p><span style="color: rgb(179, 182, 183);">Advertorial</span><br class="softbreak"></p>
     </div>
@@ -172,11 +162,12 @@
                     </div>
 
 
-
-                    <img src="../img/desperatewife.webp" alt="Hero-Bild: Frau liegt entspannt mit ergonomischem Kissen"
-                        width="800" height="500" decoding="async" fetchpriority="high"
-                        class="w-full max-w-3xl mx-auto mb-10 rounded shadow-md" />
-
+                    <div
+                        class="w-full max-w-3xl mx-auto mb-10 rounded shadow-md aspect-[16/10] relative overflow-hidden">
+                        <img src="/img/desperatewife.webp"
+                            alt="Hero-Bild: Frau liegt entspannt mit ergonomischem Kissen" decoding="async"
+                            fetchpriority="high" class="absolute inset-0 w-full h-full object-cover" />
+                    </div>
 
 
 
