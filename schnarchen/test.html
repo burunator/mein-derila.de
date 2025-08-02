@@ -6,11 +6,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Mein Schnarchen war so laut, dass meine Frau ins Gästezimmer zog</title>
 
-    <!-- Fonts & Styles -->
-    <link rel="preload" href="/fonts/open-sans.css" as="style" onload="this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="/fonts/open-sans.css">
-    </noscript>
+
     <link rel="stylesheet" href="/style.css" media="print" onload="this.media='all'">
     <noscript>
         <link rel="stylesheet" href="/style.css">
@@ -20,7 +16,30 @@
     <link rel="preload" as="image" href="/img/desperatewife.webp" type="image/webp" fetchpriority="high">
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('/fonts/open-sans/open-sans-v34-latin-regular.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url('/fonts/open-sans/open-sans-v34-latin-600.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url('/fonts/open-sans/open-sans-v34-latin-700.woff2') format('woff2');
+        }
+
 
         body {
             font-family: 'Open Sans', sans-serif;
