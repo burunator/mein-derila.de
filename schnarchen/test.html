@@ -151,10 +151,10 @@
 
                 <!-- Video -->
                 <div class="my-6 hidden md:block">
-                    <video autoplay loop muted class="w-80 h-[150px] object-cover rounded shadow-md">
-                        <source src="https://vidads.s3.us-east-1.amazonaws.com/apnea-video.mp4" loading="lazy"
-                            type="video/mp4" />
+                    <video autoplay loop muted class="w-80 h-[150px] object-cover rounded shadow-md" preload="metadata">
+                        <source src="/img/apnea-video.mp4" type="video/mp4" />
                     </video>
+
                 </div>
 
                 <section class="my-10">
@@ -493,7 +493,8 @@
                             alt="Derila Kissen" class="mx-auto w-[240px] aspect-[1/1] object-contain" width="240"
                             height="240" />
                     </a>
-                    <div class="text-center my-2 min-h-[24px]">
+                    <div class="text-center my-2 h-[32px]">
+
                         <p class="text-white font-medium leading-tight">NUR heute 70 % RABATT<br> + 30 Tage
                             Rückgaberecht</p>
                     </div>
@@ -555,11 +556,15 @@
         </div>
     </footer>
 
-    <!-- Mobile CTA -->
+
+
+    <!-- Mobile Sticky CTA Button -->
     <a href="https://trk.mein-derila.de/click"
-        class="inline-block md:hidden shadow-none no-underline rounded leading-[2rem] bg-green-500 hover:bg-green-600 text-white py-3 mt-4 text-[19px] sticky bottom-0 w-full text-center">
-        VERFÜGBARKEIT PRÜFEN
+        class="fixed bottom-0 left-0 right-0 z-50 block md:hidden bg-green-600 hover:bg-green-700 text-white text-[19px] font-bold text-center py-4 shadow-lg transition"
+        style="min-height: 60px;">
+        ✅ VERFÜGBARKEIT PRÜFEN
     </a>
+
 
     <!-- Scripts (Hotjar + Tracking) -->
     <script>
